@@ -27,8 +27,19 @@ Once you are done with the wiring, you can finally populate the breadboard with 
 
 <img src="figures/schematic.png">
 
-## Known problems
+## Adding the code to attiny85
+The code for the microcontroller is located in<code>geiger\_attiny85\_bitbang</code>.  See the header of the code for a detailed description.
+
+Loading the code onto the microcontroller is not a trivial task.  There are a number of online instructions on how to use an Arduino to program attiny85.  [Here's a great one](https://www.youtube.com/watch?v=Z_MhVSlMZI8): for that you'll need a common Arduino (e.g. Arduino UNO), a small breadboard, a bunch of wires, and a willingness to follow the instructions provided in the video.  
+#### Dependencies
+Your arduino code will require you to get <code>Tiny4kOLED\_bitbang.h</code> library from [here](https://github.com/datacute/Tiny4kOLED/blob/master/src/Tiny4kOLED_bitbang.h) or via the Arduino IDE.
+
+## Bugs
 
 There are a few known issues:
+
  + at high rates the devices tends to freeze, and the OLED shows corrupted imagery.  This is likely due to some array overrun in the microcontroller's code.
+
+## Components
+See the <code>Bill\_of_Materials.xlsx</code> for a complete list of materials, cost estimates, as well as links to digikey and Amazon for quick ordering.
 
