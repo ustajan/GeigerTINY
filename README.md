@@ -16,7 +16,7 @@ The design consists of a
 ## Description and basic assembly instructions
 
 Given the simplicity of the design we only provide a photo and a basic schematic of the layout.  
-<img src = "figures/assemply.png" width=300>
+<img src = "figures/assembly.png" width=300>
 
 ### Building the device
 We suggest that you start by taking a (170 point) mini-breadboard and first put the various interconnects with wires. The colors of the wires of course don't matter, however picking the right color code will help you later greatly in your debugging. The "ATTINY" chip is the attiny85.
