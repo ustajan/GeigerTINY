@@ -1,6 +1,6 @@
 # GeigerTINY
 
-This repo describes an even simpler Geiger design to the arduino based one we described [ealier](https://github.com/ustajan/Geiger_lanph), using just nine analog components, all operated by an ATTINY85 microcontroller.
+This repo describes an even simpler Geiger design to the arduino based one we described [ealier](https://github.com/ustajan/Geiger_lanph), using just 14 analog components, all operated by an ATTINY85 microcontroller.
 
 ## Design
 
@@ -23,7 +23,7 @@ We suggest that you start by taking a (170 point) mini-breadboard and first put 
 
 <img src="figures/breadboard.png">
 
-Once you are done with the wiring, you can finally populate the breadboard with the nine analog components as below.  Add the battery connection, the OLED, and the SBM-20 connections last. The HV line (brown) goes to the + terminal of SBM-20, of course.
+Once you are done with the wiring, you can finally populate the breadboard with the nine analog components as below.  Add the battery connection, the OLED, and the SBM-20 connections last. The HV line (orange) goes to the + terminal of SBM-20, of course.
 
 <img src="figures/schematic.png">
 
@@ -38,7 +38,7 @@ Your arduino code will require you to get <code>Tiny4kOLED\_bitbang.h</code> lib
 
 There are a few known issues:
 
- + at high rates the devices tends to freeze, and the OLED shows corrupted imagery.  This is likely due to some array overrun in the microcontroller's code.
+ -  <del>at high rates the devices tends to freeze, and the OLED shows corrupted imagery.  This is likely due to some array overrun in the microcontroller's code.</del> This was due to noise leaking onto the power bus of the OLED.  Resolved by placing a 33nF cap between + and -.  ✅
 
 ## Components
 See the <code>Bill\_of_Materials.xlsx</code> for a complete list of materials, cost estimates, as well as links to digikey and Amazon for quick ordering.
